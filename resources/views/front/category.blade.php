@@ -37,7 +37,7 @@
                                                     <input type='hidden' name='quantity' value='1' />
 
                                                     @if($product->existsInCart())
-                                                        <small>Czeka w koszyku</small>
+                                                        <small>Czeka w koszyku!!</small>
                                                     @else
                                                         <button type="submit" class="btn btn-secondary btn-sm">Do koszyka</button>
                                                     @endif
@@ -59,3 +59,5 @@
             </div>
         </div>
     @endsection
+
+
