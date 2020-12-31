@@ -58,21 +58,35 @@
                                                         <p class="mb-3 text-muted text-uppercase small">Kategoria: {{ $product->category->name }}</p>
                                                     </div>
 
-                                                    <div>
-                                                        <div class="def-number-input number-input safari_only mb-0 w-100 d-flex">
-                                                            <button
-                                                                type="button"
-                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                                class="minus">-</button>
+                                                    <form method='POST' action={{ url('addToCart') }}>
+                                                        @csrf
 
-                                                            <input class="quantity" min="0" name="quantity" value={{ $cart[$product->id] }} type="number">
+                                                        <input type='hidden' name='product_id' value={{ $product->id }} />
 
-                                                            <button
-                                                                type="button"
-                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                                class="plus">+</button>
+                                                        <div>
+                                                            <div class="def-number-input number-input safari_only mb-0 w-100 d-flex">
+                                                                <button
+                                                                    type="button"
+                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                                    class="minus"
+                                                                >-</button>
+
+                                                                <input class="quantity" min="0" name="quantity" value={{ $cart[$product->id] }} type="number">
+
+                                                                <button
+                                                                    type="button"
+                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                                    class="plus"
+                                                                >+</button>
+                                                            </div>
                                                         </div>
-                                                    </div>
+
+                                                        <div class='row mt-3'>
+                                                            <div class='col-sm-12 d-flex justify-content-end'>
+                                                                <button type='submit' class='btn btn-primary'>Aktualizuj produkt</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
 
                                                 <div class="d-flex justify-content-between align-items-center">

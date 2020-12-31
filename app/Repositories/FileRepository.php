@@ -11,4 +11,10 @@ class FileRepository extends BaseRepository
     {
         $this->model = $model;
     }
+
+    public function getLogo() {
+        return $this->model
+            ->where('relation', 'logo')
+            ->first();
+    }
 }

@@ -65,8 +65,11 @@ body {
     background-size: cover;
 }
 
-.navbar-brand {
-    max-width: 5%;
+.navbar-brand > img {
+
+    top: 20px;
+    position: absolute;
+    max-height: 64px;
 }
 
 .btn-link {

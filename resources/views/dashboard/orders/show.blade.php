@@ -72,7 +72,7 @@
                             @forelse($order->products as $product)
                                 @php
                                     $price = $product->price();
-                                    $multiply = $product->quantity * $price;
+                                    $multiply = $product->pivot->quantity * $price;
                                     $total += $multiply;
                                 @endphp
 
@@ -81,8 +81,8 @@
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->category->name }}</td>
                                     <td>{{ $product->pivot->quantity }}</td>
-                                    <td>{{ $price }} złotych</td>
-                                    <td>{{ $multiply }} złotych</td>
+                                    <td>{{ $price }} zł</td>
+                                    <td>{{ $multiply }} zł</td>
                                 </tr>
                             @empty
                                 <tr>
@@ -92,7 +92,7 @@
 
                             <tr>
                                 <th scope='row' colspan='5' class='text-right'>Razem:</th>
-                                <td>{{ $total }} złotych</td>
+                                <td>{{ $total }} zł</td>
                             </tr>
                         </tbody>
                     </table>

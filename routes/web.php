@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Middleware\LogoMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,41 +21,46 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', array(
-    FrontController::class, 'index'
-));
+Route::group(array(
+    'prefix' => '/',
+    'middleware' => LogoMiddleware::class
+), function () {
+    Route::get('/', array(
+        FrontController::class, 'index'
+    ));
 
-Route::get('/category/{id}', array(
-    FrontController::class, 'category'
-));
+    Route::get('/category/{id}', array(
+        FrontController::class, 'category'
+    ));
 
-Route::get('/product/{id}', array(
-    FrontController::class, 'product'
-));
+    Route::get('/product/{id}', array(
+        FrontController::class, 'product'
+    ));
 
-Route::post('/addToCart', array(
-    FrontController::class, 'addToCart'
-));
+    Route::post('/addToCart', array(
+        FrontController::class, 'addToCart'
+    ));
 
-Route::get('/deleteFromCart/{id}', array(
-    FrontController::class, 'removeFromCart'
-));
+    Route::get('/deleteFromCart/{id}', array(
+        FrontController::class, 'removeFromCart'
+    ));
 
-Route::get('/cart', array(
-    FrontController::class, 'cart'
-));
+    Route::get('/cart', array(
+        FrontController::class, 'cart'
+    ));
 
-Route::get('/order', array(
-    FrontController::class, 'order'
-));
+    Route::get('/order', array(
+        FrontController::class, 'order'
+    ));
 
-Route::post('/order', array(
-    FrontController::class, 'saveOrder'
-));
+    Route::post('/order', array(
+        FrontController::class, 'saveOrder'
+    ));
 
-Route::get('/summary/{id}', array(
-    FrontController::class, 'summary'
-));
+    Route::get('/summary/{id}', array(
+        FrontController::class, 'summary'
+    ));
+});
 
 Route::prefix('/files')->group(function () {
     Route::delete('/', array(
@@ -93,6 +99,16 @@ Route::prefix('dashboard')->middleware('logged')->group(function () {
     Route::get('/', array(
         DashboardController::class, 'welcome'
     ));
+
+    Route::prefix('configuration')->group(function () {
+        Route::get('/', array(
+            DashboardController::class, 'configuration'
+        ));
+
+        Route::post('/', array(
+            DashboardController::class, 'configurationStore'
+        ));
+    });
 
     Route::prefix('categories')->group(function () {
         Route::get('/{id?}', array(

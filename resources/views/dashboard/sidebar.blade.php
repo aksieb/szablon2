@@ -15,6 +15,9 @@
         <a href={{ url('/dashboard/orders') }}>Zamówienia</a>
     </li>
     <li>
+        <a href={{ url('/dashboard/configuration') }}>Konfiguracja</a>
+    </li>
+    <li>
         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"
             class="dropdown-toggle">{{ Auth::user()->email }}</a>
         <ul class="collapse list-unstyled" id="userSubmenu">

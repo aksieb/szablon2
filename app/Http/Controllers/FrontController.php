@@ -156,11 +156,13 @@ class FrontController extends Controller
         CategoryRepository $categoryRepository
     ) {
         $order = $orderRepository->find($id);
-        $categories = $categoryRepository->getAll(array('id', 'name'));
+        $categories = $categoryRepository->getByCategoryId();
+        $allCategories = $categoryRepository->getAll(array('id', 'name'));
 
         return view('front.summary', array(
             'order'         => $order,
             'categories'    => $categories,
+            'allCategories' => $allCategories,
             'units'         => Main::UNITS
         ));
     }

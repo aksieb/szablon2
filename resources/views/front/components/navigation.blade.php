@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href={{ url('/') }}>
-            <img src="{{ url('/assets/img/5.jpg') }}" class="img-fluid" alt="...">
+            <img src="{{ url($logo->filename) }}" alt="...">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"

@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration {
         });
     }
 
+
     public function down() {
         Schema::dropIfExists('product');
     }

@@ -21,7 +21,7 @@
                             najlepszej jakości.
                             Nasz sklep prowadzny jest przez najlepszych specjalistów kończących renomowaną uczelnię.
                             To dzięki ich umiejętnością strona ta jest bardzo przejrzysta i przyjemna w użytkowaniu.
-                            <img src="{{ url('/assets/img/a.jpg') }}" class="img-fluid" alt="...">
+                            <img src="{{ url('/assets/img/b.jpg') }}" class="img-fluid" alt="...">
                             <hr>
                             Zamówione produkty wysyłamy najpóźniej w kolejnym dniu roboczym.
                             Posiadamy system magazynowy dzięki któremu nie będzie sytuacji w której zapłącicie za produkt,
