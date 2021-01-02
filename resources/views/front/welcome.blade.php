@@ -12,6 +12,7 @@
             @include('front.components.menu')
 
             <div class="col-lg-9">
+
                 <div class="card card-outline-secondary my-4">
                     <div class="card-header">
                         Czym się zajmujemy
@@ -21,10 +22,10 @@
                             najlepszej jakości.
                             Nasz sklep prowadzny jest przez najlepszych specjalistów kończących renomowaną uczelnię.
                             To dzięki ich umiejętnością strona ta jest bardzo przejrzysta i przyjemna w użytkowaniu.
-                            <img src="{{ url('/assets/img/b.jpg') }}" class="img-fluid" alt="...">
+                            <img src="{{ url('/assets/img/r4.jpg') }}" class="img-fluid" alt="...">
                             <hr>
                             Zamówione produkty wysyłamy najpóźniej w kolejnym dniu roboczym.
-                            Posiadamy system magazynowy dzięki któremu nie będzie sytuacji w której zapłącicie za produkt,
+                            Posiadamy system magazynowy dzięki któremu nie będzie sytuacji w której zapłacicie za produkt,
                             który nie zostanie do Was wysłany.
 
                             <hr>

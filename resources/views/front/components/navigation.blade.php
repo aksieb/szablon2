@@ -1,26 +1,72 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href={{ url('/') }}>
-            <img src="{{ url($logo->filename) }}" alt="...">
-        </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href={{ url('/cart') }}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                        </svg>
-                    </a>
-
-                </li>
-            </ul>
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url('/assets/img/r1.jpg')  }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url('/assets/img/r2.jpg')  }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url('/assets/img/r3.jpg')  }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
     </div>
-</nav>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">GÓRSKIE</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <a class="navbar-brand" href="#">MIEJSKIE</a>
+        <a class="navbar-brand" href="#">SZOSOWE</a>
+        <a class="navbar-brand" href="#">CZĘŚCI</a>
+        <a class="navbar-brand" href="#">ZESTAWY</a>
+        <a class="navbar-brand" href="#">VOUCHERY</a>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+      </form>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

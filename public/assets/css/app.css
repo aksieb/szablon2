@@ -57,19 +57,20 @@ ul ul a {
 }
 
 body {
-    /* background-image: url('/assets/img/11.jpg');*/
+    background-image: url('/assets/img/r5.jpg');
     width: 100%;
     height: auto;
     margin: 0%;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .navbar-brand > img {
 
     top: 20px;
     position: absolute;
-    max-height: 64px;
+    max-height: 20px;
 }
 
 .btn-link {
@@ -108,4 +109,9 @@ body {
 
 h5 {
     color: rgb(24, 2, 2) !important;
+}
+
+.men {
+    background-color: darkblue !important;
+
 }

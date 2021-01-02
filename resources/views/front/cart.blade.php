@@ -81,10 +81,9 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class='row mt-3'>
-                                                            <div class='col-sm-12 d-flex justify-content-end'>
-                                                                <button type='submit' class='btn btn-primary'>Aktualizuj produkt</button>
-                                                            </div>
+                                                        <div class='row'>
+                                                            <div class
+                                                            <button type='submit' class='btn btn-primary'>Aktualizuj produkt</button>
                                                         </div>
                                                     </form>
                                                 </div>
